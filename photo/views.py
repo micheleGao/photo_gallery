@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import generics
 from .serializers import ArtistSerializer, ReviewSerializer, GallerySerializer
-from .models import Artist, Gallery,Review
+from .models import Artist, Gallery, Review
 from rest_framework import permissions
 from photo.permissions import IsOwnerOrReadOnly
 # Create your views here.

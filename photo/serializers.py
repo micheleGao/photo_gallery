@@ -13,7 +13,8 @@ class GallerySerializer(serializers.HyperlinkedModelSerializer):
     )
     class Meta:
         model = Gallery
-        fields = ('id', 'artist', 'artist_id', 'title', 'art_url')
+        fields = ('id', 'artist','artist_id', 'title', 'art_url')
+
 class ReviewSerializer(serializers.HyperlinkedModelSerializer):
     artist = serializers.HyperlinkedRelatedField(
         view_name='artist_detail', read_only=True)
@@ -40,6 +41,6 @@ class ArtistSerializer(serializers.HyperlinkedModelSerializer):
     artist_url=serializers.ModelSerializer.serializer_url_field(view_name='artist_detail')
     class Meta:
         model = Artist
-        fields = ('id', 'photo_url','artist_url', 'nationality', 'name','reviews', 'gallery')
+        fields = ('id','photo_url', 'artist_url', 'nationality', 'name','reviews', 'gallery')
 
 

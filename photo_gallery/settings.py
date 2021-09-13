@@ -38,12 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'photo',
-    'users',
     'djoser',
-    'rest_framework',
     'corsheaders',
     'rest_framework.authtoken',
+    'rest_framework',
+    'photo_gallery',
+    'photo',
+    'users',
 
 ]
 
@@ -86,6 +87,16 @@ WSGI_APPLICATION = 'photo_gallery.wsgi.application'
 DATABASES = {
   'default': dj_database_url.config(conn_max_age=600)
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'photo',
+#         'USER': 'photouser',
+#         'PASSWORD': 'photo',
+#         'HOST': 'localhost'
+#     }
+# }
 
 
 # Password validation
