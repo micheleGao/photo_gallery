@@ -21,8 +21,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = os.environ['SECRET_KEY']
-SECRET_KEY="6)ep0-betaorc)dp==wx@rd88efl%aik3a+#pwbj)rf_*4p)44"
+SECRET_KEY = os.environ['SECRET_KEY']
+# SECRET_KEY="6)ep0-betaorc)dp==wx@rd88efl%aik3a+#pwbj)rf_*4p)44"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True if os.environ['MODE'] == 'dev' else False
 
@@ -160,3 +160,5 @@ DJOSER = {
         'user': 'users.serializers.UserCreateSerializer'
     }
 }
+
+STATIC_ROOT=os.path.join(BASE_DIR, "static/")
